@@ -25,3 +25,12 @@ php artisan app:settings:change theme
 Navigate to the Paymenter admin panel and go to the settings page. On the Security tab you can fill in the ips of your proxy server.
 
 :::
+
+::: details I changed my Captcha settings and I can't log in anymore
+If you changed your Captcha settings and now you can't log in anymore, you can disable the Captcha by running the following command:
+
+```bash
+cd /var/www/paymenter && php artisan app:settings:change captcha disabled
+```
+
+:::
