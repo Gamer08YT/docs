@@ -1,10 +1,10 @@
 # Creating SSL Certificates
 
-Our guide to creating SSL Certificates
+Paymenter's official guide to generating SSL certificates. An SSL certificate secures your site, displaying the padlock icon and "Secure" label in browsers.
 
-## Step 1: Installing Certbot
+## 1. Installing Certbot
 
-First we need to install certbot
+First, we need to install Certbot.
 
 ::: code-group
 
@@ -22,39 +22,26 @@ sudo apt install -y certbot
 
 :::
 
-## Step 2: Creating the Certificate
+## 2. Creating the Certificate
 
-Then we are going to create the certificate
-
-### Step 1: Stopping the webserver
+Using Certbot, we will create the certificate.
 
 > [!IMPORTANT]
-> Make sure you are not running anything on port 80 if you are running anything on port 80 certbot will not work. You can check this by running: ```sudo lsof -i :80```
+> Make sure you are not running anything on port 80 — Certbot will not work if anything is using it. You can check with:
+>
+> ```bash
+> sudo lsof -i :80
+> ```
 
 ::: code-group
 
 ```bash [Nginx]
 sudo systemctl stop nginx
-```
-
-```bash [Apache]
-sudo systemctl stop apache2
-```
-
-:::
-
-### Step 2: Creating the certificate
-
-> [!IMPORTANT]
-> Make sure to replace example.com with the domain name you want to use.
-
-::: code-group
-
-```bash [Nginx]
 certbot certonly --nginx -d example.com
 ```
 
 ```bash [Apache]
+sudo systemctl stop apache2
 certbot certonly --apache -d example.com
 ```
 
@@ -64,17 +51,32 @@ certbot certonly --standalone -d example.com
 
 :::
 
-## Renewing
-
-And now you are done. The certificates will however need to be renewed often. You can do this manualy by running ```certbot renew``` or you can setup a cronjob to do it for you:
-
-First open your crontab: ``crontab -e``
-
-Then you set this cronjob in it to do the renewing for you every day at 23:00
-
 > [!IMPORTANT]
-> Make sure to replace nginx with the webserver that you are using.
+> Replace `example.com` with your actual domain name.
+
+## Renewing Your SSL Certificate
+
+Your SSL certificates are now active, but they **expire automatically** and need to be renewed regularly. You can renew them manually by running:
+
+```bash
+sudo certbot renew
+```
+
+Or, you can automate this using a **cron job**, which is the recommended approach.
+
+Run the following command to open the cronjob file:
+
+```bash
+crontab -e
+```
+
+Paste the following line at the bottom of the file. This example will run the renewal process every day at **11:00 PM**:
 
 ```bash
 0 23 * * * certbot renew --quiet --deploy-hook 'systemctl restart nginx'
 ```
+
+> \[!IMPORTANT]
+> Make sure to replace `"nginx"` with the name of your webserver (e.g., `apache2` or another if you're using something else).
+
+You can customize how often this job runs using [this website](https://crontab.guru/).

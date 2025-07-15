@@ -1,7 +1,7 @@
 # FAQ
 
 ::: details CSS assets are not loading
-This is often related to a wrong app url in the database. You can fix this by running the following command:
+This is often related to a wrong app URL in the database. To fix this, run the following command:
 
 ```bash
 php artisan app:settings:change app_url
@@ -9,10 +9,10 @@ php artisan app:settings:change app_url
 
 :::
 
-::: details I changed the theme and now its throwing an error
+::: details I changed my theme, and now Paymenter is throwing an error.
 
-This can have a few reasons. The most common is that you didn't follow the installation guide correctly.
-To revert back to the default theme you can run the following command:
+This can happen for a few reasons. The most common is the installation guide was followed incorrectly.
+To revert back to the default theme, run the following command:
 
 ```bash
 php artisan app:settings:change theme
@@ -20,14 +20,14 @@ php artisan app:settings:change theme
 
 :::
 
-::: details How to configure a proxy (Cloudflare etc)
+::: details How to setup a proxy (e.g. Cloudflare, etc)
 
-Navigate to the Paymenter admin panel and go to the settings page. On the Security tab you can fill in the ips of your proxy server.
+Navigate to **Admin → Settings → Security**. Here, you can fill in a single IP address, or a subnet.
 
 :::
 
-::: details I changed my Captcha settings and I can't log in anymore
-If you changed your Captcha settings and now you can't log in anymore, you can disable the Captcha by running the following command:
+::: details I changed my CAPTCHA settings, and now I can not log in
+You can disable CAPTCHA (it is not recommended to keep this off) by running the following command:
 
 ```bash
 cd /var/www/paymenter && php artisan app:settings:change captcha disabled

@@ -1,94 +1,118 @@
-# Migration from version 0.x to 1.0
+# Migration from Version 0.x to 1.0
 
 This guide will help you migrate from Paymenter v0.x to v1.0.
 
 ::: warning
-This migrator might not work as expected, please make sure to backup your data before starting the migration process.
+Always back up your data before proceeding. This migrator is not guaranteed to work without issues!
 :::
 
-## Step 1: Backup your data
+## 1. Backup Your Data
 
-Before you start the migration process, make sure to backup your data. You can do this by running the following command:
+Start by backing up your database:
 
 ```bash
 mysqldump -u root -p paymenter > paymenter.sql
 ```
 
-Copy your .env APP_KEY somewhere safe, as you will need it later.
+Next, copy the value of `APP_KEY` from your `.env` file and store it somewhere safe — you’ll need it later.
 
-Backup the V0 installation folder, so you can revert back if needed.
+Backup the current v0 installation folder in case you need to roll back:
 
 ```bash
 cp -r /var/www/paymenter /var/www/paymenter-v0
 ```
 
-Remove the old installation folder, so you can install the new version.
+Now, remove the old installation folder to prepare for the new version:
 
 ```bash
 rm -rf /var/www/paymenter
 ```
 
-## Step 2: Follow the installation guide
-
-::: warning
-Because Paymenter uses a newer PHP version make sure to remove the old PHP version using `apt remove php8.2*`.
+:::info tip
+Adjust the paths above if your Paymenter installation is located elsewhere.
 :::
 
-To install the release, you can follow the instructions in the [installation guide](/docs/installation/install.md). 
+## 2. Install the New Version
 
-But instead the `Setting up database` section run:
+::: warning
+Paymenter v1.0 requires a newer PHP version. If you're running PHP 8.2, remove it first:
+
+```bash
+sudo apt remove php8.2*
+```
+
+:::
+
+Follow the [Installation Guide](/docs/installation/install.md) to install the latest version.
+
+Skip the "Setting up database" section and instead run:
 
 ```bash
 php artisan migrate:fresh --seed
 php artisan app:init
 ```
 
-Update your `.env` file with the new APP_KEY you just copied.
+Then update your new `.env` file with the `APP_KEY` you backed up earlier.
 
+## 3. Create a Temporary Database
 
-## Step 3: Create a temporary database for import
-
-To import your data from v0.x to v1.0, you need to create a temporary database:
+You’ll need a temporary database to import your old data:
 
 ```bash
 mysql -u root -p
+```
+
+Inside the MySQL shell:
+
+```sql
 CREATE DATABASE paymenter_temp;
 GRANT ALL PRIVILEGES ON paymenter_temp.* TO 'paymenter'@'127.0.0.1' WITH GRANT OPTION;
 ```
 
-Then import your data:
+Now import your backup into the temporary database:
 
 ```bash
 mysql -u root -p paymenter_temp < paymenter.sql
 ```
 
-## Step 4: Migrate old data
+## 4. Migrate the Data
 
-Now that you have your data in the temporary database, you can start changing the data to the new format, using:
+Run the migration command:
 
 ```bash
 php artisan app:migrate-0.x paymenter_temp
 ```
-This command will require you to enter the password of the database user.
 
-It will automatically get the database server info, such as `host`, `port`, and `username`, from your `.env` file.
-However, if you want to manually provide these values, you can do so using the `php artisan app:migrate-0.x paymenter_temp username 127.0.0.1 3306` format.
+This command will prompt you for the database user’s password.
 
-## Step 5: Cleanup
+> It uses your `.env` file to read the host, port, and username automatically.  
+> Want to set them manually? Use this format:
+>
+> ```bash
+> php artisan app:migrate-0.x paymenter_temp username 127.0.0.1 3306
+> ```
 
-Now that you have migrated your data, you can remove the temporary database:
+## 5. Cleanup
+
+Once the migration is complete, you can remove the temporary database:
 
 ```bash
 mysql -u root -p
+```
+
+Inside the MySQL shell:
+
+```sql
 DROP DATABASE paymenter_temp;
 ```
 
-Once you have removed the temporary database, you can remove the old installation folder:
+Now remove the backup of your old installation:
 
 ```bash
 rm -rf /var/www/paymenter-v0
 ```
 
-## Step 6: Done
+## 6. You're Done!
 
-You have now successfully migrated from v0.x to v1.0. If you have any issues, please let us know by creating an issue on our [GitHub repository](https://github.com/Paymenter/Paymenter/issues).
+Your Paymenter instance has successfully migrated from v0.x to v1.0.  
+If you encounter any issues, feel free to [open an issue on GitHub](https://github.com/Paymenter/Paymenter/issues).
