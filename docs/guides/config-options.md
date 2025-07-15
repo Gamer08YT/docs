@@ -6,7 +6,7 @@ Configurable options are a powerful feature which allow your customer to customi
 
 In this guide we'll create a configurable option for a Pterodactyl server. The configurable option will allow the customer to select the type of server they want to order.
 
-## Step 1: Create the Configurable Option
+## 1: Create the Configurable Option
 
 First, we need to create a category for the configuration and select the products we want to offer the choices upon checkout. We do this by filling in the following form:
 
@@ -17,7 +17,7 @@ It is important to set the `Name` to what you want to be displayed to your custo
 Now, we need to provide a property that we want to change. In the example, we have chosen `egg_id`
 For a full list of names, see the [Pterodactyl guide](../extensions/pterodactyl.md)
 
-## Step 2: Making Inputs
+## 2: Making Inputs
 
 Now we need to create the inputs for the configurable option. Click on `Options`.
 In the example, we want an option for Paper. Click on `Add Option` and fill in the form.
@@ -26,7 +26,7 @@ The `Environment Variable` is used to overwrite server setting variables, in thi
 
 ![Configurable Options Config](/assets/images/guides/config-options/configurable-options-config.png)
 
-## Step 3: Updating Pricing
+## 3: Updating Pricing
 
 In case we want to add an additional charge for the configurable option, you can click on `pricing` to extend the window.
 Here you can set a `Name`, which is shown to your customer. Examples of this could be: `Free`, `Monthly`, `Yearly`
