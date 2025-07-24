@@ -146,9 +146,6 @@ DB_USERNAME=paymenter
 DB_PASSWORD=yourPassword
 ```
 
-:::warning
-If you are migrating from Paymenter v0.x to v1.0, stop! Do not go any further, and continue the [migration guide](../guides/v0-migration.md)
-
 ## Setting up database
 
 Now that we have set the correct user and database in the .env file we can go ahead and setup the database
