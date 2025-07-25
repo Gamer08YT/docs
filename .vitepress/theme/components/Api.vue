@@ -12,7 +12,7 @@ import '@scalar/api-reference/style.css'
       hideTestRequestButton: true,
       servers: [
         {
-            url: 'https://demo.paymenter.org',
+            url: 'https://demo.paymenter.org/api',
             description: 'Production server'
         }
       ]
