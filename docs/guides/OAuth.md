@@ -1,108 +1,129 @@
 # OAuth
 
-A simple tutorial on how to add oAuth authorization to your Paymenter
+A simple tutorial on how to add OAuth authorization to your Paymenter installation.
+
+---
 
 ## Discord
 
-First locate to [Discord Developer Page](https://discord.dev) and click on New application.
+### 1. Open the [Discord Developer Portal](https://discord.com/developers/docs/intro)
 
 ![discord_discorddev](/assets/images/guides/OAuth/discord_newapp.png)
 
-Name your application and hit create.
-After that navigate to OAuth2 and click on Add Redirect
-and add Paymenter OAuth callback URL (<https://yourdomain.here/oauth/discord/callback>).
-After that click on Reset Secret, The page should look like this.
+### 2. Click "New Application", name your application, and select "Create".
+
+### 3. Navigate to the **OAuth2** tab and click **Add Redirect**.
+
+Use the following format for the redirect URL:
+
+```
+https://<your_app_url>/oauth/discord/callback
+```
+
+Replace `<your_app_url>` with the full URL of your Paymenter installation (including any subdirectory, if applicable).
+
+### 4. Reset the client secret to generate a new one.
 
 ![discord_discorddev2](/assets/images/guides/OAuth/discord_discorddevfull.png)
 
-Now go to your Paymenter admin area and navigate to settings (... (Three dots) -> Settings --> Login)
+### 5. Go to your **Paymenter Admin Panel** → **Settings** → **Login**.
 
 ![navigation_1](/assets/images/guides/OAuth/navigation.png)
 
-Enable Discord feature and fill in the Discord Client ID & Discord Client Secret with the one showed in your Discord's developer page.
-Hit submit to save all changes and Discord OAuth should be working and visible in login page.
+### 6. Enable the **Discord** login option and paste in your **Client ID** and **Client Secret** from the Discord Developer Portal.
 
+### 7. Click **Submit** to save your changes.
 
-## Github
+Discord OAuth is now active and visible on your login page.
 
-Locate to [Github Account Settings](https://github.com/settings/profile) scroll down and click on Developer Settings
-as showed in the image.
+---
+
+## GitHub
+
+### 1. Go to your [GitHub Settings](https://github.com/settings/profile) and scroll down to **Developer settings**.
 
 ![github_1](/assets/images/guides/OAuth/github_1.png)
 
-Click on OAuth Apps and click on Register a new application
+### 2. Click **OAuth Apps**, then **Register a new application**.
 
 ![github_2](/assets/images/guides/OAuth/github_2.png)
 
-Create a new application with the callback (<https://yourdomain.here/oauth/github/callback>)
-Should look something like this.
+### 3. Fill out the application details. Use the following as your **Authorization callback URL**:
+
+```
+https://<your_app_url>/oauth/github/callback
+```
+
+Replace `<your_app_url>` with your actual domain or server IP.
 
 ![github_3](/assets/images/guides/OAuth/github_3.png)
 
-Click on Register Application, and Generate a new client secret
-The github page should look simillar to this.
+### 4. Click **Register application**. Then, click **Generate a new client secret**.
 
 ![github_4](/assets/images/guides/OAuth/github_4.png)
 
-Copy your Client ID & Client Secret and deploy it on Paymenter
+### 5. Copy your **Client ID** and **Client Secret**.
+
+### 6. Go to your **Paymenter Admin Panel** → **Settings** → **Login**.
 
 ![navigation_2](/assets/images/guides/OAuth/navigation.png)
 
-After that, click on submit to save changes and Github OAuth should be working,
-You can verify this by going to the login page and clicking on Sign in with GitHub.
+### 7. Enable the **GitHub** login option and paste in your **Client ID** and **Client Secret**.
 
+### 8. Click **Submit** to save changes.
+
+GitHub OAuth is now integrated and ready to use on your login page.
+
+---
 
 ## Google
 
-Locate to [Google API & Services Dashboard](https://console.cloud.google.com/apis/dashboard)
-Click on create a new project
+### 1. Visit the [Google Cloud Console](https://console.cloud.google.com/apis/dashboard) and create a new project.
 
 ![google_1](/assets/images/guides/OAuth/google_1.png)
 
-Name your project and click create
+### 2. Name your project and click **Create**.
 
 ![google_2](/assets/images/guides/OAuth/google_2.png)
 
-After that click on Create Credentials and OAuth client ID
+### 3. Go to **APIs & Services** → **Credentials**, then click **Create Credentials** → **OAuth Client ID**.
 
 ![google_3](/assets/images/guides/OAuth/google_3.png)
 
-If this is your first application, you will need to configure your consent screen, to continue click on Configure Consent Screen
+### 4. If prompted, configure the **OAuth Consent Screen**:
+
+- Select **External**
+- Click **Continue**
+- Fill in required details and click **Save and Continue** through each step
+- Skip Scopes and Test Users
+- Click **Back to Dashboard**
 
 ![google_4](/assets/images/guides/OAuth/google_4.png)
-
-Click on External user type and click continue
-
 ![google_5](/assets/images/guides/OAuth/google_5.png)
-
-Configure your application and click save and continue
-
 ![google_6](/assets/images/guides/OAuth/google_6.png)
-
-Ignore scopes and click continue
-
 ![google_7](/assets/images/guides/OAuth/google_7.png)
-
-Same for test users, after that scroll down and click on Back to dashboard.
-Now lets push our OAuth application to production
-
 ![google_8](/assets/images/guides/OAuth/google_8.png)
 
-After that go back to Credentials and click on Create credentials --> OAuth client ID.
+### 5. Back under **Credentials**, click **Create Credentials** → **OAuth Client ID**.
 
-![google_9](/assets/images/guides/OAuth/google_3.png)
+### 6. Choose **Web application** and add the following as an **Authorized Redirect URI**:
 
-Select Web application and for Authorized redirect URIs put (<https://yourdomain.here/oauth/google/callback>)
-Should look like this.
+```
+https://<your_app_url>/oauth/google/callback
+```
+
+Replace `<your_app_url>` appropriately.
 
 ![google_10](/assets/images/guides/OAuth/google_10.png)
 
-Click on create and you should be showed your Client ID and Client Secret
+### 7. Click **Create**. You’ll now see your **Client ID** and **Client Secret**.
 
 ![google_11](/assets/images/guides/OAuth/google_11.png)
 
-Copy both of these and go to your Paymenter admin area, navigate to the social login page. (sidebar -> scroll down -> settings -> Social Login) Enable the checkmark after that paste the Client ID and Client Secret and click submit to save changes.
+### 8. Go to your **Paymenter Admin Panel** → **Settings** → **Social Login**
 
 ![navigation_3](/assets/images/guides/OAuth/navigation.png)
 
-Congratulations, Google's OAuth should be now available for your users.
+### 9. Enable the **Google** login option, paste your **Client ID** and **Client Secret**, and click **Submit**.
+
+Google OAuth is now live on your login page.
