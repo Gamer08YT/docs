@@ -58,7 +58,7 @@ const { frontmatter } = useData();
                 <div class="absolute inset-0 z-0">
 
                     <div
-                        class="animate-pulse ![animation-duration:8s] ![animation-iteration-count:infinite] relative w-full h-[500px] bg-[var(--vp-c-brand-1)]/5 transform-3d rotate-x-25 rotate-y-18 -rotate-z-8 mask-x-from-70% mask-x-to-100% mask-y-from-70% mask-y-to-100%">
+                        class="animate-pulse ![animation-duration:8s] ![animation-iteration-count:infinite] relative w-full h-[500px] bg-[var(--vp-c-brand-1)]/5 transform-3d rotate-x-[25deg] rotate-y-[18deg] -rotate-z-[8deg] mask-x-from-70% mask-x-to-100% mask-y-from-70% mask-y-to-100%">
                         <div
                             class="absolute inset-0 bg-[linear-gradient(90deg,color-mix(in_srgb,var(--vp-c-brand-1)_10%,transparent)_1px,transparent_1px)] bg-[size:40px_100%]">
                         </div>
@@ -73,7 +73,7 @@ const { frontmatter } = useData();
                 </div>
 
                 <div
-                    class="order-1 lg:order-2 -ml-4 lg:-ml-20 flex flex-col gap-14 transform-3d rotate-x-25 rotate-y-18 -rotate-z-8 mask-r-from-80%">
+                    class="order-1 lg:order-2 -ml-4 lg:-ml-20 flex flex-col gap-14 transform-3d rotate-x-[25deg] rotate-y-[18deg] -rotate-z-[8deg] mask-r-from-80%">
                     <div
                         class="overflow-hidden group/card ![animation-duration:9s] ![animation-iteration-count:infinite] animate-rotate-border transition-all duration-500 ease-out transform-3d rounded-3xl bg-conic/[from_var(--border-angle)] from-[var(--vp-c-divider)] via-[var(--vp-c-text-3)] to-[var(--vp-c-divider)] hover:via-[var(--vp-c-brand-1)] from-80% via-90% to-100% p-px w-auto max-w-fit">
                         <div class="bg-[var(--vp-c-bg)] p-6 rounded-3xl flex flex-col items-start gap-8 relative z-10">
@@ -240,7 +240,7 @@ const { frontmatter } = useData();
         <section class="py-16 relative overflow-hidden mask-y-from-90% mask-y-to-100%">
 
             <div
-                class="absolute inset-0 z-0 flex items-center justify-center transform-3d rotate-x-55 rotate-y-0 -rotate-z-45">
+                class="absolute inset-0 z-0 flex items-center justify-center transform-3d rotate-x-[55deg] rotate-y-[0deg] -rotate-z-[45deg]">
                 <div
                     class="h-auto w-full ![animation-duration:4s] ![animation-iteration-count:infinite] animate-rotate-border transition-all duration-500 ease-out transform-3d rounded-full bg-conic/[from_var(--border-angle)] from-[var(--vp-c-border)] via-[#1fe6a3] to-[var(--vp-c-border)] from-80% via-90% to-100% p-px shadow-2xl shadow-[#1fe6a3]/10">
                     <div class="bg-[var(--vp-c-bg)] p-20 rounded-full">
@@ -379,7 +379,7 @@ const { frontmatter } = useData();
         <section class="py-12 relative overflow-hidden">
 
             <div
-                class="absolute inset-0 z-0 flex items-center justify-center transform-3d rotate-x-55 rotate-y-0 -rotate-z-45">
+                class="absolute inset-0 z-0 flex items-center justify-center transform-3d rotate-x-[55deg] rotate-y-[0deg] -rotate-z-[45deg]">
                 <div
                     class="![animation-duration:4s] ![animation-iteration-count:infinite] animate-rotate-border transition-all duration-500 ease-out transform-3d rounded-3xl bg-conic/[from_var(--border-angle)] from-[var(--vp-c-border)] via-[var(--vp-c-brand-1)] to-[var(--vp-c-border)] from-80% via-90% to-100% p-px shadow-2xl shadow-[#4060ff]/20">
                     <div class="bg-[var(--vp-c-bg)] p-20 rounded-3xl">

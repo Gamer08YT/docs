@@ -50,7 +50,7 @@ const { frontmatter } = useData();
             </div>
 
             <div
-                class="w-[900px] rotate-x-50 -rotate-z-25 translate-x-[80%] -translate-y-24 skew-x-[10deg] skew-y-[-5deg] bg-white/10 absolute inset-18 -m-3 rounded-3xl border border-white/20 p-2.5 isolate">
+                class="w-[900px] rotate-x-[50deg] -rotate-z-[25deg] translate-x-[80%] -translate-y-24 skew-x-[10deg] skew-y-[-5deg] bg-white/10 absolute inset-18 -m-3 rounded-3xl border border-white/20 p-2.5 isolate">
                 <img class="rounded-2xl" src="/landing/screenshots/dash-1.webp" />
             </div>
         </div>
