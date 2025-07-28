@@ -4,11 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@source './components/**/*.vue';
-@source '../../docs/**/*.md';
-@source '../../blog/**/*.md';
-@source '../docs/**/*.md';
-
 @custom-variant dark (&:where(.dark, .dark *));
 
 @property --border-angle {

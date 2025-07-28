@@ -6,7 +6,14 @@ export default {
   ignoreDeadLinks: true,
   vite: {
     plugins: [
-      tailwindcss()
+      tailwindcss({
+        config: {
+          content: [
+            './docs/**/*.md',
+            './docs/.vitepress/**/*.{vue,js,ts}'
+          ]
+        }
+      })
     ],
     resolve: {
       alias: {
