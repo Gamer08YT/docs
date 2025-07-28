@@ -15,7 +15,7 @@ const fetchAndProcessAllData = async () => {
   isLoading.value = true;
   error.value = null;
   try {
-    const response = await fetch('/api/extensions?limit=999');
+    const response = await fetch('https://api.paymenter.org/extensions?limit=999');
     if (!response.ok) throw new Error('API request failed');
     const data = await response.json();
     if (!data || !Array.isArray(data.extensions)) throw new Error('Invalid API response structure');
