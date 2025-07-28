@@ -12,7 +12,18 @@ export default {
       alias: {
         '@components': path.resolve(__dirname, './theme/components'),
       }
-    }
+    },
+    /* Use only in development
+    server: {
+      proxy: {
+        '/api': {
+          target: 'https://api.paymenter.org',
+          changeOrigin: true,
+          rewrite: (path) => path.replace(/^\/api/, ''),
+        },
+      },
+    },
+    */
   },
 
   title: 'Paymenter',
@@ -37,10 +48,10 @@ export default {
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Docs', link: '/docs/installation/install' },
-      { text: 'Releases', link: '/blog/v1.2-release' },
+      { text: 'Blog', link: '/blog/v1.2-release' },
       { text: 'API', link: '/api/' },
       { text: 'Development', link: '/development/extensions/index.md' },
-      { text: 'Marketplace', link: 'https://builtbybit.com/resources/categories/paymenter.76/' }
+      { text: 'Marketplace', link: '/marketplace' }
     ],
 
     logo: {
@@ -97,6 +108,7 @@ export default {
             },
             { text: 'Creating SSL Certificates', link: '/docs/guides/SSL.md' },
             { text: 'Migration from version 0.x to 1.0', link: '/docs/guides/v0-migration.md' },
+            { text: 'Deploy with Coolify', link: '/docs/guides/deploy-with-coolify.md' },
             { text: 'FAQ', link: '/docs/guides/FAQ.md' }
           ]
         },
