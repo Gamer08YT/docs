@@ -21,7 +21,7 @@ featuresLanding:
     text: Extensible
     tagline: Extensions for your needs
     desc: Create your own themes, modify and add what you need, create your custom experience for your customers.
-    marketplaceButton: Explore marketplace
+    marketplaceButton: Explore the Marketplace
   responsive:
     text: Responsive
     tagline: Mobile first
@@ -81,16 +81,17 @@ supportbanner:
   import CustomFooter from '@theme/components/CustomFooter.vue'
 </script>
 
-<div class="w-full overflow-hidden h-full">
+<div class="w-full h-full overflow-hidden lg:mask-b-from-70% mask-b-from-90%">
+<div class="flex flex-col">
   <Hero />
   <Slider />
 </div>
-
+</div>
 <div class="container mx-auto max-w-(--vp-layout-max-width)">
     <Features />
     <SupportBanner />
 </div>
 
-<div class="w-full">
+<div class="w-full overflow-hidden lg:mask-b-from-70% mask-b-from-90%">
     <CustomFooter />
 </div>

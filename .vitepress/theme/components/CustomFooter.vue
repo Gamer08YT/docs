@@ -1,150 +1,101 @@
 <template>
-  <footer class="mt-32">
-    <div class="mx-auto max-w-(--vp-layout-max-width) px-4 py-16 sm:px-6 lg:px-8">
-      <div class="lg:flex lg:items-start lg:gap-8">
+  <footer class="relative mt-32 overflow-hidden py-24">
 
-        <div class="mt-8 grid grid-cols-2 gap-8 lg:mt-0 lg:grid-cols-5 lg:gap-y-16 w-full">
-          <div class="col-span-2 sm:col-span-1">
-            <svg class="h-7 fill-(--vp-c-text-2)" viewBox="0 0 150 205" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g clip-path="url(#clip0_1_17)">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M0 107V205H42.8571V139.638H100C133.333 139.638 150 123 150 89.7246V69.5L75 107V69.5L148.227 32.8863C143.133 10.9621 127.057 0 100 0H0V107ZM0 107V69.5L75 32V69.5L0 107Z"
-                  fill="current" />
-              </g>
-              <defs>
-                <clipPath id="clip0_1_17">
-                  <rect width="150" height="205" fill="white" />
-                </clipPath>
-              </defs>
-            </svg>
-
-          </div>
-
-          <div class="flex flex-col gap-4 col-span-2 sm:col-span-1">
-            <p class="font-medium text-white">Product</p>
-            <ul class="space-y-4 text-sm">
-              <li class="transition text-[var(--vp-c-text-2)] hover:text-[var(--vp-c-text-1)]">
-                <a href="#">
-                  Features
-                </a>
-              </li>
-
-              <li class="transition text-[var(--vp-c-text-2)] hover:text-[var(--vp-c-text-1)]">
-                <a href="/docs/installation/install">
-                  Installation
-                </a>
-              </li>
-
-              <li class="transition text-[var(--vp-c-text-2)] hover:text-[var(--vp-c-text-1)]">
-                <a href="#">
-                  Marketplace
-                </a>
-              </li>
-
-              <li class="transition text-[var(--vp-c-text-2)] hover:text-[var(--vp-c-text-1)]">
-                <a href="https://paas.paymenter.org/">
-                  PaaS (Cloud)
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="flex flex-col gap-4 col-span-2 sm:col-span-1">
-            <p class="font-medium text-gray-900 dark:text-white">Developers</p>
-            <ul class="space-y-4 text-sm">
-              <li class="transition text-[var(--vp-c-text-2)] hover:text-[var(--vp-c-text-1)]">
-                <a href="/development/extensions/">
-                  Extensions
-                </a>
-              </li>
-
-              <li class="transition text-[var(--vp-c-text-2)] hover:text-[var(--vp-c-text-1)]">
-                <a href="/development/theme">
-                  Themes
-                </a>
-              </li>
-
-              <li class="transition text-[var(--vp-c-text-2)] hover:text-[var(--vp-c-text-1)]">
-                <a href="/development/event-list">
-                  Events
-                </a>
-              </li>
-
-              <li class="transition text-[var(--vp-c-text-2)] hover:text-[var(--vp-c-text-1)]">
-                <a href="/development/OAuth">
-                  OAuth
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="flex flex-col gap-4 col-span-2 sm:col-span-1">
-            <p class="font-medium text-gray-900 dark:text-white">About</p>
-            <ul class="space-y-4 text-sm text-(--vp-c-text-2)">
-              <li class="transition text-[var(--vp-c-text-2)] hover:text-[var(--vp-c-text-1)]">
-                <a href="/docs/guides/FAQ">
-                  FAQ
-                </a>
-              </li>
-
-              <li class="transition text-[var(--vp-c-text-2)] hover:text-[var(--vp-c-text-1)]">
-                <a href="https://github.com/orgs/Paymenter/people">
-                  Team
-                </a>
-              </li>
-
-              <li class="transition text-[var(--vp-c-text-2)] hover:text-[var(--vp-c-text-1)]">
-                <a href="https://github.com/Paymenter/Paymenter/releases">
-                  Releases
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="flex flex-col gap-4 col-span-2 sm:col-span-1">
-            <p class="font-medium text-gray-900 dark:text-white">Other</p>
-            <ul class="space-y-4 text-sm">
-              <li class="transition text-[var(--vp-c-text-2)] hover:text-[var(--vp-c-text-1)]">
-                <a href="/blog/">
-                  Blog
-                </a>
-              </li>
-
-              <li class="transition text-[var(--vp-c-text-2)] hover:text-[var(--vp-c-text-1)]">
-                <a href="/docs/contribute/how-to-help">
-                  Contribute
-
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <ul class="col-span-2 flex justify-start gap-6 lg:col-span-5 lg:justify-end">
-            <li class="transition text-[var(--vp-c-text-2)] hover:text-[var(--vp-c-text-1)]">
-              <a href="https://linkedin.com/company/paymenter" rel="noreferrer" target="_blank">
-                <span class="sr-only">LinkedIn</span>
-                <linkedin-box-fill class="size-6" />
-              </a>
-            </li>
-            
-            <li class="transition text-[var(--vp-c-text-2)] hover:text-[var(--vp-c-text-1)]">
-              <a href="https://discord.gg/xB4UUT3XQg" rel="noreferrer" target="_blank">
-                <span class="sr-only">Discord</span>
-                <discord-fill class="size-6" />
-              </a>
-            </li>
-
-            <li class="transition text-[var(--vp-c-text-2)] hover:text-[var(--vp-c-text-1)]">
-              <a href="https://github.com/Paymenter/Paymenter" rel="noreferrer" target="_blank">
-                <span class="sr-only">Github</span>
-                <github-fill class="size-6" />
-              </a>
-            </li>
-          </ul>
+    <div class="absolute inset-0 z-0">
+      <div class="absolute inset-0 blur-3xl">
+        <div class="![animation:var(--animate-swing-float)] ![animation-duration:18s] origin-top h-64 w-[1000px] absolute top-10 -left-48 
+                    bg-sky-500/20 dark:bg-blue-900/30">
+        </div>
+        <div class="![animation:var(--animate-swing-float)] ![animation-duration:22s] origin-top h-72 w-[1000px] absolute top-0 left-0
+                    bg-violet-500/20 dark:bg-[var(--vp-c-brand-1)]/25">
+        </div>
+        <div class="![animation:var(--animate-swing-float)] ![animation-duration:16s] origin-top h-72 w-[1000px] absolute bottom-20 left-20 
+                    bg-rose-500/15 dark:bg-purple-900/25">
+        </div>
+        <div class="![animation:var(--animate-swing-float)] ![animation-duration:24s] origin-top h-64 w-[1000px] absolute top-10 -right-48 
+                    bg-sky-500/15 dark:bg-blue-900/25">
+        </div>
+        <div class="![animation:var(--animate-swing-float)] ![animation-duration:20s] origin-top h-72 w-[1000px] absolute bottom-10 -right-20 
+                    bg-violet-500/15 dark:bg-[var(--vp-c-brand-1)]/25">
         </div>
       </div>
 
+      <div class="absolute inset-0">
+        <svg id="noice" class="w-full h-full">
+          <filter id="noise-filter">
+            <feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="3" stitchTiles="stitch" />
+            <feColorMatrix type="saturate" values="0" />
+            <feComponentTransfer>
+              <feFuncA type="linear" slope="0.04" />
+            </feComponentTransfer>
+          </filter>
+          <rect width="100%" height="100%" filter="url(#noise-filter)"></rect>
+        </svg>
+      </div>
+    </div>
 
+    <div class="relative z-10 mx-auto max-w-[var(--vp-layout-max-width)] px-4 sm:px-6 lg:px-8">
+      <div class="w-full">
+        <div class="grid grid-cols-2 gap-8 md:grid-cols-4 lg:grid-cols-5">
+          <div class="flex flex-col gap-4">
+            <p class="font-medium text-[var(--vp-c-text-1)]">Product</p>
+            <ul class="space-y-4 text-sm">
+              <li class="transition text-[var(--vp-c-text-2)] hover:text-[var(--vp-c-text-1)]"><a href="#">Features</a>
+              </li>
+              <li class="transition text-[var(--vp-c-text-2)] hover:text-[var(--vp-c-text-1)]"><a
+                  href="/docs/installation/install">Installation</a></li>
+              <li class="transition text-[var(--vp-c-text-2)] hover:text-[var(--vp-c-text-1)]"><a
+                  href="#">Marketplace</a></li>
+              <li class="transition text-[var(--vp-c-text-2)] hover:text-[var(--vp-c-text-1)]"><a
+                  href="https://paas.paymenter.org/">PaaS (Cloud)</a></li>
+            </ul>
+          </div>
+          <div class="flex flex-col gap-4">
+            <p class="font-medium text-[var(--vp-c-text-1)]">Developers</p>
+            <ul class="space-y-4 text-sm">
+              <li class="transition text-[var(--vp-c-text-2)] hover:text-[var(--vp-c-text-1)]"><a
+                  href="/development/extensions/">Extensions</a></li>
+              <li class="transition text-[var(--vp-c-text-2)] hover:text-[var(--vp-c-text-1)]"><a
+                  href="/development/theme">Themes</a></li>
+              <li class="transition text-[var(--vp-c-text-2)] hover:text-[var(--vp-c-text-1)]"><a
+                  href="/development/event-list">Events</a></li>
+              <li class="transition text-[var(--vp-c-text-2)] hover:text-[var(--vp-c-text-1)]"><a
+                  href="/development/OAuth">OAuth</a></li>
+            </ul>
+          </div>
+          <div class="flex flex-col gap-4">
+            <p class="font-medium text-[var(--vp-c-text-1)]">About</p>
+            <ul class="space-y-4 text-sm text-[var(--vp-c-text-2)]">
+              <li class="transition text-[var(--vp-c-text-2)] hover:text-[var(--vp-c-text-1)]"><a
+                  href="/docs/guides/FAQ">FAQ</a></li>
+              <li class="transition text-[var(--vp-c-text-2)] hover:text-[var(--vp-c-text-1)]"><a href="/team">Team</a>
+              </li>
+              <li class="transition text-[var(--vp-c-text-2)] hover:text-[var(--vp-c-text-1)]"><a
+                  href="https://github.com/Paymenter/Paymenter/releases">Releases</a></li>
+            </ul>
+          </div>
+          <div class="flex flex-col gap-4">
+            <p class="font-medium text-[var(--vp-c-text-1)]">Other</p>
+            <ul class="space-y-4 text-sm">
+              <li class="transition text-[var(--vp-c-text-2)] hover:text-[var(--vp-c-text-1)]"><a href="/blog/">Blog</a>
+              </li>
+              <li class="transition text-[var(--vp-c-text-2)] hover:text-[var(--vp-c-text-1)]"><a
+                  href="/docs/contribute/how-to-help">Contribute</a></li>
+            </ul>
+          </div>
+        </div>
+        <ul class="mt-12 flex justify-center gap-6 lg:justify-end">
+          <li><a href="https://linkedin.com/company/paymenter" rel="noreferrer" target="_blank"
+              class="transition text-[var(--vp-c-text-2)] hover:text-[var(--vp-c-text-1)]"><span
+                class="sr-only">LinkedIn</span><linkedin-box-fill class="size-6" /></a></li>
+          <li><a href="https://discord.gg/xB4UUT3XQg" rel="noreferrer" target="_blank"
+              class="transition text-[var(--vp-c-text-2)] hover:text-[var(--vp-c-text-1)]"><span
+                class="sr-only">Discord</span><discord-fill class="size-6" /></a></li>
+          <li><a href="https://github.com/Paymenter/Paymenter" rel="noreferrer" target="_blank"
+              class="transition text-[var(--vp-c-text-2)] hover:text-[var(--vp-c-text-1)]"><span
+                class="sr-only">Github</span><github-fill class="size-6" /></a></li>
+        </ul>
+      </div>
     </div>
   </footer>
 </template>
