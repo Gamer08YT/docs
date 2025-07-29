@@ -6,7 +6,7 @@ import '@scalar/api-reference/style.css'
 <template>
   <ApiReference
     :configuration="{
-      url: '/openapi.json',
+      url: 'https://paymenter.org/openapi.json',
       hideDarkModeToggle: true,
       theme: 'purple',
       hideTestRequestButton: true,
