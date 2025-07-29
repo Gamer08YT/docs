@@ -34,14 +34,6 @@ const fetchAndProcessAllData = async () => {
       purchase_count: item.purchase_count,
     }));
 
-    mappedItems.sort((a, b) => {
-      const aIsPaymenter = a.author === 'Paymenter';
-      const bIsPaymenter = b.author === 'Paymenter';
-      if (aIsPaymenter && !bIsPaymenter) return -1;
-      if (!aIsPaymenter && bIsPaymenter) return 1;
-      return b.rating - a.rating;
-    });
-
     masterItems.value = mappedItems;
 
   } catch (err) {
@@ -200,7 +192,7 @@ const formatDate = (dateString) => dateString ? new Date(dateString).toLocaleDat
                   <star-fill class="size-4 fill-[#fed53d]" />
                   <span class="text-[var(--vp-c-text-2)]">{{ item.rating }} ({{ item.review_count }})</span>
                 </div>
-                <div class="flex items-center gap-2" title="Purchases">
+                <div v-if="item.price > 0" class="flex items-center gap-2" title="Purchases">
                   <shopping-bag-4-fill class="size-4 fill-[#9ca3af]" />
                   <span class="text-[var(--vp-c-text-2)]">{{ item.purchase_count }}</span>
                 </div>
