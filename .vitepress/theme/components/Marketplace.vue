@@ -115,23 +115,23 @@ const formatDate = (dateString) => dateString ? new Date(dateString).toLocaleDat
     </div>
 
     <div class="flex justify-between items-center mb-6">
-      <div class="flex justify-center gap-2 flex-wrap">
+      <div class="flex justify-center gap-3 flex-wrap">
         <button @click="activeFilter = 'all'" :class="{
-          'bg-[var(--vp-c-brand-1)] text-white border-[var(--vp-c-brand-1)]': activeFilter === 'all',
-          'bg-[var(--vp-c-bg)] text-[var(--vp-c-text-1)] border-[var(--vp-c-border)] hover:border-[var(--vp-c-brand-1)]': activeFilter !== 'all'
-        }" class="px-6 py-3 border-2 rounded-lg font-medium transition-all duration-200">
+          'bg-[var(--vp-c-brand-1)] border-[var(--vp-c-brand-1)]': activeFilter === 'all',
+          'bg-[var(--vp-c-bg)] text-[var(--vp-c-text-2)] border-[var(--vp-c-border)] hover:border-[var(--vp-c-brand-1)] hover:text-[var(--vp-c-text-1)]': activeFilter !== 'all'
+        }" class="filter-button px-6 py-3 border-2 rounded-lg font-medium transition-all duration-200">
           All ({{ grandTotalItemCount }})
         </button>
         <button @click="activeFilter = 'extension'" :class="{
-          'bg-[var(--vp-c-brand-1)] text-white border-[var(--vp-c-brand-1)]': activeFilter === 'extension',
-          'bg-[var(--vp-c-bg)] text-[var(--vp-c-text-1)] border-[var(--vp-c-border)] hover:border-[var(--vp-c-brand-1)]': activeFilter !== 'extension'
-        }" class="px-6 py-3 border-2 rounded-lg font-medium transition-all duration-200">
+          'bg-[var(--vp-c-brand-1)] border-[var(--vp-c-brand-1)]': activeFilter === 'extension',
+          'bg-[var(--vp-c-bg)] text-[var(--vp-c-text-2)] border-[var(--vp-c-border)] hover:border-[var(--vp-c-brand-1)] hover:text-[var(--vp-c-text-1)]': activeFilter !== 'extension'
+        }" class="filter-button px-6 py-3 border-2 rounded-lg font-medium transition-all duration-200">
           Extensions ({{ grandTotalExtensionCount }})
         </button>
         <button @click="activeFilter = 'theme'" :class="{
-          'bg-[var(--vp-c-brand-1)] text-white border-[var(--vp-c-brand-1)]': activeFilter === 'theme',
-          'bg-[var(--vp-c-bg)] text-[var(--vp-c-text-1)] border-[var(--vp-c-border)] hover:border-[var(--vp-c-brand-1)]': activeFilter !== 'theme'
-        }" class="px-6 py-3 border-2 rounded-lg font-medium transition-all duration-200">
+          'bg-[var(--vp-c-brand-1)] border-[var(--vp-c-brand-1)]': activeFilter === 'theme',
+          'bg-[var(--vp-c-bg)] text-[var(--vp-c-text-2)] border-[var(--vp-c-border)] hover:border-[var(--vp-c-brand-1)] hover:text-[var(--vp-c-text-1)]': activeFilter !== 'theme'
+        }" class="filter-button px-6 py-3 border-2 rounded-lg font-medium transition-all duration-200">
           Themes ({{ grandTotalThemeCount }})
         </button>
       </div>
@@ -263,5 +263,13 @@ const formatDate = (dateString) => dateString ? new Date(dateString).toLocaleDat
   border-width: 5px;
   border-style: solid;
   border-color: #1f2937 transparent transparent transparent;
+}
+
+.filter-button:not(.bg-\[var\(--vp-c-brand-1\)\]) {
+  color: var(--vp-c-text-2);
+}
+
+.filter-button:not(.bg-\[var\(--vp-c-brand-1\)\]):hover {
+  color: var(--vp-c-text-1);
 }
 </style>
