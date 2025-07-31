@@ -88,7 +88,7 @@
           <li><a href="https://linkedin.com/company/paymenter" rel="noreferrer" target="_blank"
               class="transition text-[var(--vp-c-text-2)] hover:text-[var(--vp-c-text-1)]"><span
                 class="sr-only">LinkedIn</span><linkedin-box-fill class="size-6" /></a></li>
-          <li><a href="https://discord.gg/xB4UUT3XQg" rel="noreferrer" target="_blank"
+          <li><a href="https://discord.gg/paymenter-882318291014651924" rel="noreferrer" target="_blank"
               class="transition text-[var(--vp-c-text-2)] hover:text-[var(--vp-c-text-1)]"><span
                 class="sr-only">Discord</span><discord-fill class="size-6" /></a></li>
           <li><a href="https://github.com/Paymenter/Paymenter" rel="noreferrer" target="_blank"
