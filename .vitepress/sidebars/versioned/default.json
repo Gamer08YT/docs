@@ -4,7 +4,6 @@
         "text": "Getting Started",
         "items": [
           { "text": "Introduction", "link": "/docs/getting-started/introduction.md" },
-          { "text": "Reporting Bugs", "link": "/docs/getting-started/bugs.md" }
         ]
       },
       {

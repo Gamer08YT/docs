@@ -45,7 +45,7 @@
               <li class="transition text-[var(--vp-c-text-2)] hover:text-[var(--vp-c-text-1)]"><a
                   href="/docs/installation/install">Installation</a></li>
               <li class="transition text-[var(--vp-c-text-2)] hover:text-[var(--vp-c-text-1)]"><a
-                  href="#">Marketplace</a></li>
+                  href="/marketplace">Marketplace</a></li>
               <li class="transition text-[var(--vp-c-text-2)] hover:text-[var(--vp-c-text-1)]"><a
                   href="https://paas.paymenter.org/">PaaS (Cloud)</a></li>
             </ul>

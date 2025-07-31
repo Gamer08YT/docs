@@ -68,7 +68,6 @@ export default {
           text: 'Getting Started',
           items: [
             { text: 'Introduction', link: '/docs/getting-started/introduction' },
-            { text: 'Reporting Bugs', link: '/docs/getting-started/bugs' }
           ]
         },
         {
