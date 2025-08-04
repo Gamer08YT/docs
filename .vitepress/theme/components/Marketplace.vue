@@ -25,7 +25,7 @@ const fetchAndProcessAllData = async () => {
       id: item.resource_id,
       author: item.author === 'CorwinDev' ? 'Paymenter' : item.author,
       image: item.image_url,
-      url: item.url + '?ref=398830',
+      url: item.url,
       description: item.tag_line,
       rating: item.review_average,
       downloads: item.download_count,
