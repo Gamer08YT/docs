@@ -180,6 +180,7 @@ export default {
     },
 
     socialLinks: [
+      { icon: 'discord', link: 'https://discord.gg/paymenter-882318291014651924' },
       { icon: 'github', link: 'https://github.com/Paymenter' }
     ],
   },
