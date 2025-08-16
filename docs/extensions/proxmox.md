@@ -39,25 +39,28 @@ Make sure to disable the **Privilege Separation** option.
 
 The first step is to configure your Proxmox server in the Paymenter admin panel.
 
-Go to the **Servers** tab in the admin panel and click on **Proxmox**.
+Go to the **Servers** tab in the admin panel and configure one Proxmox server
 
-![image](/assets/images/extensions/proxmox/server_settings.png)
+## Configuring the first location
 
-Save it and you are done with the configuration.
+Once you've configured your Proxmox server, you need to configure a location.
 
+The location contains the details such as the url, api token, and os templates.
+
+![image](/assets/images/extensions/proxmox/location.png)
 
 ## Configuring a node
-Once you've configured your Proxmox server, you need to configure a node. 
+Once you've configured your Proxmox location, you need to configure a node. 
 
 Navigate to the **Nodes** tab in the admin panel and press **Add Node**.
 
 Fill in the correct node and setup the OS templates.
 
-![image](/assets/images/extensions/proxmox/node_1.png)
+![image](/assets/images/extensions/proxmox/node.png)
 
-Then configure the IP addresses.
+## Configuring a IP Pool
 
-![image](/assets/images/extensions/proxmox/node_2.png)
+![image](/assets/images/extensions/proxmox/ippool.png)
 
 ## Configuring the product
 
