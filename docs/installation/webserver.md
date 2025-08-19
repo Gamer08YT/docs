@@ -92,7 +92,7 @@ And then as last we need to set the right permissions for paymenter with this co
 chown -R www-data:www-data /var/www/paymenter/*
 ```
 
-And that is it. Paymenter should now be fully installed. Should you run into any issues you can ask for support on our [Discord](https://discord.gg/xB4UUT3XQg). Please make sure to follow the forum post guidelines when doing this.
+And that is it. Paymenter should now be fully installed. Should you run into any issues you can ask for support on our [Discord](https://discord.gg/paymenter-882318291014651924). Please make sure to follow the forum post guidelines when doing this.
 
 ## Apache
 

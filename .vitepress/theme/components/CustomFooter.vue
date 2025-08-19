@@ -45,7 +45,7 @@
               <li class="transition text-[var(--vp-c-text-2)] hover:text-[var(--vp-c-text-1)]"><a
                   href="/docs/installation/install">Installation</a></li>
               <li class="transition text-[var(--vp-c-text-2)] hover:text-[var(--vp-c-text-1)]"><a
-                  href="#">Marketplace</a></li>
+                  href="/marketplace">Marketplace</a></li>
               <li class="transition text-[var(--vp-c-text-2)] hover:text-[var(--vp-c-text-1)]"><a
                   href="https://paas.paymenter.org/">PaaS (Cloud)</a></li>
             </ul>
@@ -85,13 +85,13 @@
           </div>
         </div>
         <ul class="mt-12 flex justify-center gap-6 lg:justify-end">
-          <li><a href="https://linkedin.com/company/paymenter" rel="noreferrer" target="_blank"
+          <li><a href="https://linkedin.com/company/paymenter" target="_blank"
               class="transition text-[var(--vp-c-text-2)] hover:text-[var(--vp-c-text-1)]"><span
                 class="sr-only">LinkedIn</span><linkedin-box-fill class="size-6" /></a></li>
-          <li><a href="https://discord.gg/xB4UUT3XQg" rel="noreferrer" target="_blank"
+          <li><a href="https://discord.gg/paymenter-882318291014651924" target="_blank"
               class="transition text-[var(--vp-c-text-2)] hover:text-[var(--vp-c-text-1)]"><span
                 class="sr-only">Discord</span><discord-fill class="size-6" /></a></li>
-          <li><a href="https://github.com/Paymenter/Paymenter" rel="noreferrer" target="_blank"
+          <li><a href="https://github.com/Paymenter/Paymenter" target="_blank"
               class="transition text-[var(--vp-c-text-2)] hover:text-[var(--vp-c-text-1)]"><span
                 class="sr-only">Github</span><github-fill class="size-6" /></a></li>
         </ul>

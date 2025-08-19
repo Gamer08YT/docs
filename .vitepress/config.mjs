@@ -68,7 +68,6 @@ export default {
           text: 'Getting Started',
           items: [
             { text: 'Introduction', link: '/docs/getting-started/introduction' },
-            { text: 'Reporting Bugs', link: '/docs/getting-started/bugs' }
           ]
         },
         {
@@ -181,6 +180,7 @@ export default {
     },
 
     socialLinks: [
+      { icon: 'discord', link: 'https://discord.gg/paymenter-882318291014651924' },
       { icon: 'github', link: 'https://github.com/Paymenter' }
     ],
   },
