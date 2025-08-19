@@ -15,3 +15,17 @@ Press `Test Connection` to see if the connection is working.
 Select the Plesk server you created in the previous step and type in the correct package.
 
 ![image](/assets/images/extensions/plesk/product.png)
+
+### Sending the credentials via email
+
+You can send the username and password to the customer via email. Fill in the email template in the product settings.
+
+Here is a example of a email template:
+
+```blade
+Your domain {{ $domain }} is ready.
+@isset($password)
+- Username: {{ $username }}
+- Password: {{ $password }}
+@endisset
+```
